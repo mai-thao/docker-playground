@@ -1,0 +1,6 @@
+# Use the slim version of python: https://hub.docker.com/_/python/tags?name=slim
+
+services:
+  hello:
+    image: python:3.9-slim
+    command: python -c "print('Hello Mai from your docker-compose.yml file!')"
