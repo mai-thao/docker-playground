@@ -16,6 +16,10 @@ without any compatibility issues! It's like a portable box bundled with everythi
 3) Open terminal and confirm you have it installed by running the command: `docker --version`
     * You should see an output like: `Docker version 26.1.1, build 4cf5afa`
 
+Now that you have Docker up and running, you can interact with it in 2 ways: docker compose or Dockerfile
+
+### Docker Compose
+A command-line tool that lets you run multiple Docker containers.
 
 4) Execute the sample `docker-compose.yml` file in this directory by running the command: `docker compose up`
     * You should see the output: `Hello Mai from your docker-compose.yml file!`
@@ -23,6 +27,28 @@ without any compatibility issues! It's like a portable box bundled with everythi
 
 
 5) Stop and remove the container with the command: `docker compose down`
+
+
+### Dockerfile
+A script file that builds a single Docker container image.
+
+
+4) Build the Docker image by executing the command: `docker build -t hello-docker .`
+    * The `-t` flag tags the image with the name "hello-docker"
+    * The `.` (dot) tells Docker to look for the Dockerfile in the current directory
+
+
+5) Confirm the image was successfully created with the command: `docker images`
+    * Look for the image tagged "hello-docker"
+    * FYI: The image is stored locally on your machine in Docker's internal image storage
+
+
+6) Run the Docker container with your new image with: `docker run hello-docker`
+    * You should see the outpupt: `Hello Mai from Dockerfile!`
+
+
+7) Stop and remove the container with the command: `docker compose down`
+
 
 Other useful docker commands:
 * `docker info` to list useful info like the numbers of running, paused, stopped containers and images
