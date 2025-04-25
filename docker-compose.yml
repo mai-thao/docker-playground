@@ -2,5 +2,5 @@
 
 services:
   hello:
-    image: python:3.9-slim
+    image: python:3.13.3-slim
     command: python -c "print('Hello Mai from your docker-compose.yml file!')"
