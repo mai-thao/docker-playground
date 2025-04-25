@@ -49,8 +49,10 @@ A script file that builds a single Docker container image.
 
 7) Stop and remove the container with the command: `docker compose down`
 
+## Useful Docker Commands
+There are so much useful commands to learn, here are some prominent ones.
 
-Other useful docker commands:
+
 * `docker info` to list useful info like the numbers of running, paused, stopped containers and images
 * `docker ps -a` to list all existing containers, their IDs, their statuses, etc.
 * `docker images` to list all the active images
@@ -60,3 +62,4 @@ Other useful docker commands:
 * `docker image prune` to remove dangling images not tagged and referenced by a container 
 * `docker container prune` to remove all stopped containers
 * `docker system prune` to remove all danging images, stopped container, unused networks and caches
+... and so much! See the Docker CLI Cheat Sheet: https://docs.docker.com/get-started/docker_cheatsheet.pdf
