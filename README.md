@@ -51,6 +51,16 @@ A script file that builds a single Docker container image.
 
 7) Stop and remove the container with the command: `docker compose down`
 
+## Docker Images
+Docker images are the backbone of Docker. Each image is a snapshot of an app and contains everything it needs to create and run a container. You can find public images on Docker Hub or store private ones in your own registry or a cloud provider's registry (like Artifactory).
+
+Docker images can be found in the Docker Hub registry at: https://hub.docker.com/search?type=image
+
+You can download a Docker image from Docker Hub with the command: `docker pull <image-name>:<tag>`.
+   * If you omit the tag then it pulls the "latest" version by default.
+
+You can then inspect the image to see info about its configuration, environment variables, and history with the command: `docker inspect <image-name>:<tag>`
+
 ## Useful Docker Commands
 There are so much useful commands to learn, here are some prominent ones.
 
