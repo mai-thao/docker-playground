@@ -7,6 +7,8 @@ You can package your app, upload it to a private registry, and then I can downlo
 without any compatibility issues! It's like a portable box bundled with everything needed to run your cool application._
 
 ## Install Docker
+*Kep in mind that these instructions are for Mac - Apple Silicon.*
+
 1) Download Docker from: https://docs.docker.com/get-started/get-docker/
 
 
@@ -15,7 +17,7 @@ without any compatibility issues! It's like a portable box bundled with everythi
 
 3) Open terminal and confirm you have it installed
     * Run the command: `docker --version`. You should see an output like: `Docker version 26.1.1, build 4cf5afa`
-    * Also run the command: `docker ps -a`. You should see a table with different columns describing any containers (there should be none if this is your first time)
+    * Also run the command: `docker ps -a`. You should see a table with different columns describing container info (there should be none if this is your first time)
     * If you get an error like `zsh: command not found: docker` then you need to set your PATH environment variable with the command: `export PATH="$PATH:/Applications/Docker.app/Contents/Resources/bin/"` or manually do so in Docker Desktop app > Settings > General > Configure shell completions > and toggle the "Automatically" option
 
 Now that you have Docker up and running, you can interact with it in 2 ways: docker compose or Dockerfile
@@ -52,7 +54,7 @@ A script file that builds a single Docker container image.
 7) Stop and remove the container with the command: `docker compose down`
 
 ## Docker Images
-Docker images are the backbone of Docker. Each image is a snapshot of an app and contains everything it needs to create and run a container. You can find public images on Docker Hub or store private ones in your own registry or a cloud provider's registry (like Artifactory).
+Docker images are the **backbone** of Docker. Each image is a snapshot of an app and contains everything it needs to create and run a container. You can find public images on Docker Hub or store private ones in your own registry or a cloud provider's registry (like Artifactory).
 
 Docker images can be found in the Docker Hub registry at: https://hub.docker.com/search?type=image
 
@@ -60,6 +62,8 @@ You can download a Docker image from Docker Hub with the command: `docker pull <
    * If you omit the tag then it pulls the "latest" version by default.
 
 You can then inspect the image to see info about its configuration, environment variables, and history with the command: `docker inspect <image-name>:<tag>`
+
+Docker images can get huge! You can delete unused, outdated images with the command: `docker rmi <IMG_ID>` 
 
 ## Useful Docker Commands
 There are so much useful commands to learn, here are some prominent ones.
