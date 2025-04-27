@@ -13,8 +13,10 @@ without any compatibility issues! It's like a portable box bundled with everythi
 2) Once it finishes, open the "Docker Desktop" app to start the Docker engine
 
 
-3) Open terminal and confirm you have it installed by running the command: `docker --version`
-    * You should see an output like: `Docker version 26.1.1, build 4cf5afa`
+3) Open terminal and confirm you have it installed
+    * Run the command: `docker --version`. You should see an output like: `Docker version 26.1.1, build 4cf5afa`
+    * Also run the command: `docker ps -a`. You should see a table with different columns describing any containers (there should be none if this is your first time)
+    * If you get an error like `zsh: command not found: docker` then you need to set your PATH environment variable with the command: `export PATH="$PATH:/Applications/Docker.app/Contents/Resources/bin/"` or manually do so in Docker Desktop app > Settings > General > Configure shell completions > and toggle the "Automatically" option
 
 Now that you have Docker up and running, you can interact with it in 2 ways: docker compose or Dockerfile
 
