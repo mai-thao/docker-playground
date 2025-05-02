@@ -17,42 +17,42 @@ without any compatibility issues! It's like a portable box bundled with everythi
 
 
 4) Open terminal and confirm you have it installed
-    * Run the command: `docker --version`. You should see an output like: `Docker version 26.1.1, build 4cf5afa`
-    * Also run the command: `docker ps -a`. You should see a table with different columns describing container info (there should be none if this is your first time)
-    * If you get an error like `zsh: command not found: docker` then you need to set your PATH environment variable with the command: `export PATH="$PATH:/Applications/Docker.app/Contents/Resources/bin/"` or manually do so in Docker Desktop app > Settings > General > Configure shell completions > and toggle the "Automatically" option
+    * Run the command: `$ docker --version`. You should see an output like: `Docker version 26.1.1, build 4cf5afa`
+    * Also run the command: `$ docker ps -a`. You should see a table with different columns describing container info (there should be none if this is your first time)
+    * If you get an error like `zsh: command not found: docker` then you need to set your PATH environment variable with the command: `$ export PATH="$PATH:/Applications/Docker.app/Contents/Resources/bin/"` or manually do so in Docker Desktop app > Settings > General > Configure shell completions > and toggle the "Automatically" option
 
 Now that you have Docker up and running, you can interact with it in 2 ways: docker compose or Dockerfile
 
 ### Docker Compose
 A command-line tool that lets you run multiple Docker containers.
 
-4) Execute the sample `docker-compose.yml` file in this directory by running the command: `docker compose up`
+4) Execute the sample `docker-compose.yml` file in this directory by running the command: `$ docker compose up`
     * You should see the output: `Hello Mai from your docker-compose.yml file!`
     * The docker compose file uses a slim Python image to print some texts to standard output (aka the terminal)
 
 
-5) Stop and remove the container with the command: `docker compose down`
+5) Stop and remove the container with the command: `$ docker compose down`
 
 
 ### Dockerfile
 A script file that builds a single Docker container image.
 
 
-4) Build the Docker image by executing the command: `docker build -t hello-docker .`
+4) Build the Docker image by executing the command: `$ docker build -t hello-docker .`
     * The `-t` flag tags the image with the name "hello-docker"
     * The `.` (dot) tells Docker to look for the Dockerfile in the current directory
 
 
-5) Confirm the image was successfully created with the command: `docker images`
+5) Confirm the image was successfully created with the command: `$ docker images`
     * Look for the image tagged "hello-docker"
     * FYI: The image is stored locally on your machine in Docker's internal image storage
 
 
-6) Run the Docker container with your new image with: `docker run hello-docker`
+6) Run the Docker container with your new image with: `$ docker run hello-docker`
     * You should see the outpupt: `Hello Mai from Dockerfile!`
 
 
-7) Stop and remove the container with the command: `docker compose down`
+7) Stop and remove the container with the command: `$ docker compose down`
 
 ## Docker Images
 Docker images are the **backbone** of Docker. Each image is a snapshot of an app and contains everything it needs to create and run a container. You can find public images on Docker Hub or store private ones in your own registry or a cloud provider's registry (like Artifactory).
@@ -61,26 +61,27 @@ Docker images are the **backbone** of Docker. Each image is a snapshot of an app
 Docker images can be found in the Docker Hub registry at: https://hub.docker.com/search?type=image
 
 #### Download a Local Copy
-You can download a Docker image from Docker Hub with the command: `docker pull <image-name>:<tag>`.
+You can download a Docker image from Docker Hub with the command: `$ docker pull <image-name>:<tag>`.
    * If you omit the tag then it pulls the "latest" version by default.
 
-You can then inspect the image to see info about its configuration, environment variables, and history with the command: `docker inspect <image-name>:<tag>`
+You can then inspect the image to see info about its configuration, environment variables, and history with the command: `$ docker inspect <image-name>:<tag>`
 
 #### Remove Images
-Docker images can get huge! You can delete unused, outdated images with the command: `docker rmi <IMG_ID>` 
-   * Find the IMG_ID by executing the command: `docker images`
+Docker images can get huge! You can delete unused, outdated images with the command: `$ docker rmi <IMG_ID>` 
+   * Find the IMG_ID by executing the command: `$ docker images`
 
 ## Useful Docker Commands
 There are so much useful commands to learn, here are some prominent ones.
 
 
-* `docker info` to list useful info like the numbers of running, paused, stopped containers and images
-* `docker ps -a` to list all existing containers, their IDs, their statuses, etc.
-* `docker images` to list all the active images
-* `docker logs <CONTAINER_ID>` to show the logs of a container
-* `docker stop <CONTAINER_ID>` to stop the container
-* `docker rmi <IMG_ID>` to remove the downloaded Docker image
-* `docker image prune` to remove dangling images not tagged and referenced by a container 
-* `docker container prune` to remove all stopped containers
-* `docker system prune` to remove all danging images, stopped container, unused networks and caches
-... and so much! See the Docker CLI Cheat Sheet: https://docs.docker.com/get-started/docker_cheatsheet.pdf
+* `$ docker info` to list useful info like the numbers of running, paused, stopped containers and images
+* `$ docker ps -a` to list all existing containers, their IDs, their statuses, etc.
+* `$ docker images` to list all the active images
+* `$ docker logs <CONTAINER_ID>` to show the logs of a container
+* `$ docker stop <CONTAINER_ID>` to stop the container
+* `$ docker rmi <IMG_ID>` to remove the downloaded Docker image
+* `$ docker image prune` to remove dangling images not tagged and referenced by a container 
+* `$ docker container prune` to remove all stopped containers
+* `$ docker system prune` to remove all danging images, stopped container, unused networks and caches
+
+... and so much! See the Docker CLI Cheat Sheet for more: https://docs.docker.com/get-started/docker_cheatsheet.pdf
