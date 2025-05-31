@@ -38,7 +38,7 @@ _With docker compose, gone are the days where you have to manually install or ru
 ### Dockerfile
 A script file that builds a single Docker container image. 
 
-_It essentially turns your app, depenencies, and configurations into a portable, reusable image that can be run on any environment (MacOS, Windows, Linux, etc.) that has Docker._
+_It essentially turns your app, dependencies, and configurations into a portable, reusable image that can be run on any environment (MacOS, Windows, Linux, etc.) with Docker._
 
 4) Build the Docker image by executing the command: `$ docker build -t hello-docker .`
     * The `-t` flag tags the image with the name "hello-docker"
