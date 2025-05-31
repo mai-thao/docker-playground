@@ -24,7 +24,9 @@ without any compatibility issues! It's like a portable box bundled with everythi
 Now that you have Docker up and running, you can interact with it in 2 ways: docker compose or Dockerfile
 
 ### Docker Compose
-A command-line tool that lets you run multiple Docker containers.
+A command-line tool that lets you define and run multiple Docker containers using a YAML file.
+
+_With docker compose, gone are the days where you have to manually install or run services needed by an app. You also don't worry about version mismatch between your local version and the app's expected version. Compose will install the correct and expected version every time from the YAML file. It also removes the "it runs on my machine" dilemma because everyone can run the same app consistently._
 
 4) Execute the sample `docker-compose.yml` file in this directory by running the command: `$ docker compose up`
     * You should see the output: `Hello Mai from your docker-compose.yml file!`
@@ -33,10 +35,10 @@ A command-line tool that lets you run multiple Docker containers.
 
 5) Stop and remove the container with the command: `$ docker compose down`
 
-
 ### Dockerfile
-A script file that builds a single Docker container image.
+A script file that builds a single Docker container image. 
 
+_It essentially turns your app, depenencies, and configurations into a portable, reusable image that can be run on any environment (MacOS, Windows, Linux, etc.) that has Docker._
 
 4) Build the Docker image by executing the command: `$ docker build -t hello-docker .`
     * The `-t` flag tags the image with the name "hello-docker"
