@@ -1,6 +1,6 @@
 ﻿# docker-playground
 
-Docker is super nifty! It is a **software containerization platform** that makes it easy to build, test, ship, and deploy applications.
+[Docker](https://www.docker.com) is super nifty! It is a **software containerization platform** that makes it easy to build, test, ship, and deploy applications.
 
 _For example, you can create a super cool application on your own machine and if I want to run it too then we can use Docker to help. 
 You can package your app, upload it to a private registry, and then I can download it and run the exact same application on my computer 
